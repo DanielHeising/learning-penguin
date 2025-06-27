@@ -1,0 +1,224 @@
+.calendar-container {
+  background-color: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.fc {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  height: fit-content !important;
+  display: flex;
+  flex-direction: column;
+}
+
+.fc .fc-view-harness {
+  height: fit-content !important;
+}
+
+.fc .fc-view {
+  height: fit-content !important;
+}
+
+.fc .fc-toolbar {
+  margin-bottom: 1.5rem !important;
+}
+
+.fc .fc-toolbar-title {
+  color: var(--text-primary);
+  font-size: 1.8rem;
+}
+
+.fc .fc-button {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: white;
+  text-transform: capitalize;
+  font-weight: 500;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.fc .fc-button:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.fc .fc-daygrid-day {
+  background-color: var(--bg-primary);
+  border-color: var(--border-color);
+  min-height: 100px;
+}
+
+.fc .fc-daygrid-day-number {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 8px;
+}
+
+.fc .fc-day-today {
+  background-color: var(--bg-secondary) !important;
+}
+
+.fc .fc-event {
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 1rem;
+  margin: 2px 0;
+}
+
+.fc .fc-event-title {
+  font-weight: 500;
+}
+
+
+@media (max-width: 1024px) {
+  .calendar-container {
+    margin-bottom: 1rem;
+  }
+
+  .fc .fc-toolbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .fc .fc-toolbar-title {
+    font-size: 1.5rem;
+  }
+}
+
+.fc .fc-dayGridMonth-view {
+  min-height: 500px;
+  max-height: 700px;
+  height: fit-content !important;
+}
+
+.fc .fc-timeGridWeek-view {
+  min-height: 500px;
+  height: fit-content !important;
+}
+
+.fc .fc-timeGridDay-view {
+  min-height: 400px;
+  height: fit-content !important;
+}
+
+.fc .fc-daygrid-body {
+  width: 100% !important;
+}
+
+.fc .fc-daygrid-day-frame {
+  min-height: 100px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  color: var(--text-primary);
+}
+
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.modal-content label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.modal-content input[type="text"],
+.modal-content textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.modal-content textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.modal-buttons button {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.modal-buttons button[type="submit"] {
+  background-color: var(--accent-primary);
+  color: white;
+}
+
+.modal-buttons button[type="submit"]:hover {
+  background-color: var(--accent-hover);
+}
+
+.modal-buttons .delete-button {
+  background-color: var(--danger);
+  color: white;
+}
+
+.modal-buttons .delete-button:hover {
+  background-color: var(--danger-hover);
+}
+
+.modal-buttons button[type="button"] {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.modal-buttons button[type="button"]:hover {
+  background-color: var(--border-color);
+} 
